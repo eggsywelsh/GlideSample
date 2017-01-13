@@ -73,6 +73,14 @@
         android:text="Request Priority"
         />
 
+    <Button
+        android:id="@+id/btn_thumbnail"
+        android:layout_below="@id/btn_priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thumbnail"
+        />
+
 
 
 </RelativeLayout>

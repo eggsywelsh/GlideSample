@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_priority)
     Button mBtnPriority;
 
+    @BindView(R.id.btn_thumbnail)
+    Button mBtnThumbnail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_priority)
     public void clickBtnPriority(View view){
         Intent intent = new Intent(MainActivity.this,PriorityActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_thumbnail)
+    public void clickBtnThumbnail(View view){
+        Intent intent = new Intent(MainActivity.this,ThumbnailActivity.class);
         startActivity(intent);
     }
 
