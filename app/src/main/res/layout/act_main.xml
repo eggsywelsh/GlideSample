@@ -49,6 +49,14 @@
         android:text="Placeholder"
         />
 
+    <Button
+        android:id="@+id/btn_resizing"
+        android:layout_below="@id/btn_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resizing"
+        />
+
 
 
 </RelativeLayout>
