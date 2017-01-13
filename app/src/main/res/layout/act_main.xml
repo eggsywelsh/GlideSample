@@ -81,6 +81,14 @@
         android:text="Thumbnail"
         />
 
+    <Button
+        android:id="@+id/btn_target_view"
+        android:layout_below="@id/btn_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Target View"
+        />
+
 
 
 </RelativeLayout>

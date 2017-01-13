@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_thumbnail)
     Button mBtnThumbnail;
 
+    @BindView(R.id.btn_target_view)
+    Button mBtnTargetView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_thumbnail)
     public void clickBtnThumbnail(View view){
         Intent intent = new Intent(MainActivity.this,ThumbnailActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_target_view)
+    public void clickTargetView(View view){
+        Intent intent = new Intent(MainActivity.this,TargetViewActivity.class);
         startActivity(intent);
     }
 
