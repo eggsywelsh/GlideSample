@@ -57,6 +57,14 @@
         android:text="Resizing"
         />
 
+    <Button
+        android:id="@+id/btn_gifandvideo"
+        android:layout_below="@id/btn_resizing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gif and Video"
+        />
+
 
 
 </RelativeLayout>

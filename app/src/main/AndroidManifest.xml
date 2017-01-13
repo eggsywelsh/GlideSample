@@ -23,7 +23,7 @@
         <activity android:name=".GridViewLoadActivity"></activity>
         <activity android:name=".PlaceholderActivity"></activity>
         <activity android:name=".ImageResizingActivity"></activity>
-        <activity android:name=".GifAndVedioActivity"></activity>
+        <activity android:name=".GifAndVideoActivity"></activity>
     </application>
 
 </manifest>

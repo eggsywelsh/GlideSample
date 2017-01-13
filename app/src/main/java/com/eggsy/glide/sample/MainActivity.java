@@ -73,4 +73,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,ImageResizingActivity.class);
         startActivity(intent);
     }
+
+
+    @OnClick(R.id.btn_gifandvideo)
+    public void clickBtnGifAndVideo(View view){
+        Intent intent = new Intent(MainActivity.this,GifAndVideoActivity.class);
+        startActivity(intent);
+    }
 }
