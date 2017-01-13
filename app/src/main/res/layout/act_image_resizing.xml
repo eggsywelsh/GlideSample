@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_resizing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load resizing image"
+        />
+
+    <Button
+        android:id="@+id/btn_scaling_center_crop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load center crop image"
+        />
+
+    <Button
+        android:id="@+id/btn_scaling_fit_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load fit center image"
+        />
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
