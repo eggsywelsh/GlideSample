@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_placeholder)
     Button mBtnPlaceholder;
 
+    @BindView(R.id.btn_resizing)
+    Button mBtnResizing;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_placeholder)
     public void clickBtnPlaceholder(View view){
         Intent intent = new Intent(MainActivity.this,PlaceholderActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_resizing)
+    public void clickBtnResizing(View view){
+        Intent intent = new Intent(MainActivity.this,ImageResizingActivity.class);
         startActivity(intent);
     }
 }
