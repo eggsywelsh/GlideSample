@@ -22,6 +22,8 @@
         <activity android:name=".ListViewLoadActivity"></activity>
         <activity android:name=".GridViewLoadActivity"></activity>
         <activity android:name=".PlaceholderActivity"></activity>
+        <activity android:name=".ImageResizingActivity"></activity>
+        <activity android:name=".GifAndVedioActivity"></activity>
     </application>
 
 </manifest>
