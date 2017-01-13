@@ -113,7 +113,7 @@ public class AdvanceLoadActivity extends AppCompatActivity {
          * load from network
          * should add user permission <uses-permission android:name="android.permission.INTERNET"></uses-permission> into Manifest file
          */
-        Glide.with(AdvanceLoadActivity.this).load("http://www.mit.edu/files/images/homepage/placeholder/mit_logo.gif?v=1484197210").into(mIvShow);
+        Glide.with(AdvanceLoadActivity.this).load("http://www.mit.edu/files/images/homepage/default/mit_logo.gif").into(mIvShow);
     }
 
     @OnClick(R.id.btn_load_file_path)

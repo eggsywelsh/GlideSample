@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.bumptech.glide.DrawableRequestBuilder;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
@@ -33,6 +34,10 @@ public class ThumbnailActivity extends AppCompatActivity {
     @BindView(R.id.btn_load_thumbnail)
     Button mBtnLoadThumbnail;
 
+
+    @BindView(R.id.btn_load_advanced_thumbnail)
+    Button mBtnLoadAdvanceThumbnail;
+
     @BindView(R.id.iv_show)
     ImageView mIvShow;
 
@@ -47,12 +52,12 @@ public class ThumbnailActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.btn_load_src)
-    public void clickLoadSrc(View view){
+    public void clickLoadSrc(View view) {
         Glide.with(ThumbnailActivity.this).load("http://i.imgur.com/rFLNqWI.jpg").into(mIvShow);
     }
 
     @OnClick(R.id.btn_load_thumbnail)
-    public void clickLoadThumbnail(View view){
+    public void clickLoadThumbnail(View view) {
         /**
          * in order to reload the remote image every click,this disable disk cache and memory cache
          *
@@ -65,6 +70,35 @@ public class ThumbnailActivity extends AppCompatActivity {
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .skipMemoryCache(true)
                 .thumbnail(0.2f)
+                .into(mIvShow2);
+    }
+
+    /**
+     * While the usage of .thumbnail() with a float parameter is easy to set up and can be very effective,
+     * it doesn't always make sense. If the thumbnail needs to load the same full-resolution image over the network,
+     * it might not be faster at all.so we use another way to load thumbnail.
+     *
+     * @param view
+     */
+    @OnClick(R.id.btn_load_advanced_thumbnail)
+    public void clickLoadAdvanceThumbnail(View view) {
+
+        /**
+         * The difference is that the first thumbnail request is completely independent of the second original request.
+         * The thumbnail can be a different resource or image URL, you can apply different transformations on it, and so on.
+         */
+
+        // setup Glide request without the into() method
+        DrawableRequestBuilder<String> thumbnailRequest = Glide
+                .with(ThumbnailActivity.this)
+                .load("http://www.mit.edu/files/images/homepage/default/mit_logo.gif");
+
+        // pass the request as a a parameter to the thumbnail request
+        Glide.with(ThumbnailActivity.this)
+                .load("http://i.imgur.com/MoJs9pT.jpg")
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .thumbnail(thumbnailRequest)
                 .into(mIvShow2);
     }
 }
