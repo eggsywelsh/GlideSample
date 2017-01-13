@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_load_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load with placeholder" />
+
+    <Button
+        android:id="@+id/btn_load_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load with error" />
+
+    <Button
+        android:id="@+id/btn_default_crossfade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load with default annimation" />
+
+    <Button
+        android:id="@+id/btn_custom_annimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load with custom annimation" />
+
+    <Button
+        android:id="@+id/btn_dont_annimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load without annimation" />
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>
