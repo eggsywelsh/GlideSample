@@ -50,7 +50,7 @@ public class ListViewLoadActivity extends AppCompatActivity {
             "http://i.imgur.com/fUX7EIB.jpg",
             "http://i.imgur.com/syELajx.jpg",
             "http://i.imgur.com/COzBnru.jpg",
-            "http://i.imgur.com/Z3QjilA.jpg",
+            "http://i.imgur.com/Z3QjilA.jpg"
     };
 
     private class ImageListAdapter extends ArrayAdapter {

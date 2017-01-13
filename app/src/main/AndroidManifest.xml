@@ -24,6 +24,7 @@
         <activity android:name=".PlaceholderActivity"></activity>
         <activity android:name=".ImageResizingActivity"></activity>
         <activity android:name=".GifAndVideoActivity"></activity>
+        <activity android:name=".PriorityActivity"></activity>
     </application>
 
 </manifest>

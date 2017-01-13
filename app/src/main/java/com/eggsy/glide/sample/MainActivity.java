@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_resizing)
     Button mBtnResizing;
 
+    @BindView(R.id.btn_priority)
+    Button mBtnPriority;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,10 +77,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     @OnClick(R.id.btn_gifandvideo)
     public void clickBtnGifAndVideo(View view){
         Intent intent = new Intent(MainActivity.this,GifAndVideoActivity.class);
         startActivity(intent);
     }
+
+    @OnClick(R.id.btn_priority)
+    public void clickBtnPriority(View view){
+        Intent intent = new Intent(MainActivity.this,PriorityActivity.class);
+        startActivity(intent);
+    }
+
+
 }

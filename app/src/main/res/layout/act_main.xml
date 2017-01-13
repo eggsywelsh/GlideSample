@@ -65,6 +65,14 @@
         android:text="Gif and Video"
         />
 
+    <Button
+        android:id="@+id/btn_priority"
+        android:layout_below="@id/btn_gifandvideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Priority"
+        />
+
 
 
 </RelativeLayout>
