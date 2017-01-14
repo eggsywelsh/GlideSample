@@ -1,94 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.eggsy.glide.sample.MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_start"
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="start"
-        />
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.eggsy.glide.sample.MainActivity">
 
-    <Button
-        android:id="@+id/btn_advance_load"
-        android:layout_below="@id/btn_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="advance load"
-        />
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start" />
 
-    <Button
-        android:id="@+id/btn_listview"
-        android:layout_below="@id/btn_advance_load"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ListView load"
-        />
+        <Button
+            android:id="@+id/btn_advance_load"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_start"
+            android:text="advance load" />
 
-    <Button
-        android:id="@+id/btn_gridview"
-        android:layout_below="@id/btn_listview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GridView load"
-        />
+        <Button
+            android:id="@+id/btn_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_advance_load"
+            android:text="ListView load" />
 
-    <Button
-        android:id="@+id/btn_placeholder"
-        android:layout_below="@id/btn_gridview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Placeholder"
-        />
+        <Button
+            android:id="@+id/btn_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_listview"
+            android:text="GridView load" />
 
-    <Button
-        android:id="@+id/btn_resizing"
-        android:layout_below="@id/btn_placeholder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Resizing"
-        />
+        <Button
+            android:id="@+id/btn_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_gridview"
+            android:text="Placeholder" />
 
-    <Button
-        android:id="@+id/btn_gifandvideo"
-        android:layout_below="@id/btn_resizing"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gif and Video"
-        />
+        <Button
+            android:id="@+id/btn_resizing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_placeholder"
+            android:text="Resizing" />
 
-    <Button
-        android:id="@+id/btn_priority"
-        android:layout_below="@id/btn_gifandvideo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Request Priority"
-        />
+        <Button
+            android:id="@+id/btn_gifandvideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_resizing"
+            android:text="Gif and Video" />
 
-    <Button
-        android:id="@+id/btn_thumbnail"
-        android:layout_below="@id/btn_priority"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thumbnail"
-        />
+        <Button
+            android:id="@+id/btn_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_gifandvideo"
+            android:text="Request Priority" />
 
-    <Button
-        android:id="@+id/btn_target_view"
-        android:layout_below="@id/btn_thumbnail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Target View"
-        />
+        <Button
+            android:id="@+id/btn_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_priority"
+            android:text="Thumbnail" />
 
+        <Button
+            android:id="@+id/btn_target_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_thumbnail"
+            android:text="Target View" />
 
+        <Button
+            android:id="@+id/btn_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_target_view"
+            android:text="Notification" />
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

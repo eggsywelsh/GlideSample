@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_target_view)
     Button mBtnTargetView;
 
+    @BindView(R.id.btn_notification)
+    Button mBtnNotification;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,63 +50,69 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.btn_start)
-    public void clickBtnStart(View view){
-        Intent intent = new Intent(MainActivity.this,StartActivity.class);
+    public void clickBtnStart(View view) {
+        Intent intent = new Intent(MainActivity.this, StartActivity.class);
         startActivity(intent);
 
     }
 
     @OnClick(R.id.btn_advance_load)
-    public void clickBtnLoading(View view){
-        Intent intent = new Intent(MainActivity.this,AdvanceLoadActivity.class);
+    public void clickBtnLoading(View view) {
+        Intent intent = new Intent(MainActivity.this, AdvanceLoadActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_listview)
-    public void clickBtnListView(View view){
-        Intent intent = new Intent(MainActivity.this,ListViewLoadActivity.class);
+    public void clickBtnListView(View view) {
+        Intent intent = new Intent(MainActivity.this, ListViewLoadActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_gridview)
-    public void clickBtnGridView(View view){
-        Intent intent = new Intent(MainActivity.this,GridViewLoadActivity.class);
+    public void clickBtnGridView(View view) {
+        Intent intent = new Intent(MainActivity.this, GridViewLoadActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_placeholder)
-    public void clickBtnPlaceholder(View view){
-        Intent intent = new Intent(MainActivity.this,PlaceholderActivity.class);
+    public void clickBtnPlaceholder(View view) {
+        Intent intent = new Intent(MainActivity.this, PlaceholderActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_resizing)
-    public void clickBtnResizing(View view){
-        Intent intent = new Intent(MainActivity.this,ImageResizingActivity.class);
+    public void clickBtnResizing(View view) {
+        Intent intent = new Intent(MainActivity.this, ImageResizingActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_gifandvideo)
-    public void clickBtnGifAndVideo(View view){
-        Intent intent = new Intent(MainActivity.this,GifAndVideoActivity.class);
+    public void clickBtnGifAndVideo(View view) {
+        Intent intent = new Intent(MainActivity.this, GifAndVideoActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_priority)
-    public void clickBtnPriority(View view){
-        Intent intent = new Intent(MainActivity.this,PriorityActivity.class);
+    public void clickBtnPriority(View view) {
+        Intent intent = new Intent(MainActivity.this, PriorityActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_thumbnail)
-    public void clickBtnThumbnail(View view){
-        Intent intent = new Intent(MainActivity.this,ThumbnailActivity.class);
+    public void clickBtnThumbnail(View view) {
+        Intent intent = new Intent(MainActivity.this, ThumbnailActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.btn_target_view)
-    public void clickTargetView(View view){
-        Intent intent = new Intent(MainActivity.this,TargetViewActivity.class);
+    public void clickTargetView(View view) {
+        Intent intent = new Intent(MainActivity.this, TargetViewActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_notification)
+    public void clickNotification(View view) {
+        Intent intent = new Intent(MainActivity.this, NotificationsActivity.class);
         startActivity(intent);
     }
 
