@@ -3,6 +3,8 @@
     package="com.eggsy.glide.sample">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -10,6 +12,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--
+         android:name=package name + class name
+         -->
+        <meta-data
+            android:name="com.eggsy.glide.sample.module.CustomGlideModule"
+            android:value="GlideModule" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +38,15 @@
         <activity android:name=".ThumbnailActivity"></activity>
         <activity android:name=".TargetViewActivity"></activity>
         <activity android:name=".NotificationsActivity"></activity>
+        <activity android:name=".AppWidgetActivity"></activity>
+
+        <receiver android:name=".widget.CustomAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider"/>
+        </receiver>
     </application>
 
 </manifest>

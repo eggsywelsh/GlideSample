@@ -1,10 +1,21 @@
 package com.eggsy.glide.sample;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.eggsy.permission.EPermission;
+import com.permission.annotation.PermissionDeny;
+import com.permission.annotation.PermissionGrant;
+
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,11 +53,22 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_notification)
     Button mBtnNotification;
 
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+
+    private static final String TAG = MainActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
         ButterKnife.bind(this);
+
+        EPermission.requestPermissions(MainActivity.this, REQUEST_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     @OnClick(R.id.btn_start)
@@ -116,5 +138,37 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        EPermission.onRequestPermissionsResult(MainActivity.this, requestCode, permissions, grantResults);
+    }
 
+    @PermissionGrant(requestPermission = Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    public void grantSdcardPermission() {
+
+        PackageManager pm = this.getPackageManager();
+        String appName = getApplicationInfo().loadLabel(pm).toString();
+
+        String externalCacheDir = Environment.getExternalStorageDirectory().getAbsolutePath();
+        File file = new File(externalCacheDir, appName + File.separator + Constant.file.path_image);
+        if (!file.exists()) {
+            boolean succ = file.mkdirs();
+            Log.i(TAG, "make image dir " + succ);
+        } else {
+            Log.i(TAG, "image dir exist");
+        }
+    }
+
+    @PermissionDeny(requestPermission = Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    public void denySdcardPermission() {
+        File externalCacheDir = getApplicationContext().getExternalCacheDir();
+        File file = new File(externalCacheDir, Constant.file.path_image);
+        if (!file.exists()) {
+            boolean succ = file.mkdirs();
+            Log.i(TAG, "make image dir " + succ);
+        } else {
+            Log.i(TAG, "image dir exist");
+        }
+    }
 }

@@ -32,4 +32,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     // the newest glide version
     compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    // permission helper
+    annotationProcessor 'com.eggsy:epermission-processor:1.1.2'
+    compile 'com.eggsy:epermission:1.1.2'
+    compile 'com.eggsy:epermission-annotations:1.1.2'
 }
