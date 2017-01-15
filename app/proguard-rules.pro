@@ -15,3 +15,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#-keepnames class com.eggsy.glide.sample.module.CustomGlideModule
+# or more generally:
+-keep public class * implements com.bumptech.glide.module.GlideModule
