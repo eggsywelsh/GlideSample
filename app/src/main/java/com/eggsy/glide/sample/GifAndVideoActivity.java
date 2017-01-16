@@ -46,6 +46,7 @@ public class GifAndVideoActivity extends AppCompatActivity {
         /**
          * display remote gif,download gif first,so it maybe consuming some time
          */
+        /*
         String gifUrl = "http://i.kinja-img.com/gawker-media/image/upload/s--B7tUiM5l--/gf2r69yorbdesguga10i.gif";
         Glide
                 .with(GifAndVideoActivity.this)
@@ -58,6 +59,24 @@ public class GifAndVideoActivity extends AppCompatActivity {
                 .error(R.mipmap.error)
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .into(mIvShow);
+        */
+
+        /**
+         * display local gif
+         */
+        Glide
+                .with(GifAndVideoActivity.this)
+                .load(R.mipmap.muddy)
+                // gif check,if load resource is not a gif,show error image,it not necessary to load and show gif
+                .asGif()
+                // not necessary
+                .placeholder(R.mipmap.placeholder)
+                // not necessary
+                .error(R.mipmap.error)
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .into(mIvShow);
+
+
     }
 
     @OnClick(R.id.btn_show_gif_bitmap)
