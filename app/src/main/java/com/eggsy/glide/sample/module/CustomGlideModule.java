@@ -14,12 +14,15 @@ import com.bumptech.glide.load.engine.cache.DiskLruCacheFactory;
 import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.module.GlideModule;
 import com.eggsy.glide.sample.Constant;
+import com.eggsy.glide.sample.model.CustomImageSizeModel;
+import com.eggsy.glide.sample.model.CustomImageSizeModelFactory;
 
 import java.io.File;
+import java.io.InputStream;
 
 /**
  * Created by eggsy on 17-1-14.
- *
+ * <p>
  * custom Glide module
  */
 
@@ -29,6 +32,15 @@ public class CustomGlideModule implements GlideModule {
 
     @Override
     public void applyOptions(Context context, GlideBuilder builder) {
+
+        /**
+         * default memory cache size
+         * default bitmap pool size
+         */
+//        MemorySizeCalculator calculator = new MemorySizeCalculator(context);
+//        int defaultMemoryCacheSize = calculator.getMemoryCacheSize();
+//        int defaultBitmapPoolSize = calculator.getBitmapPoolSize();
+
         /*
          * module data
          */
@@ -51,7 +63,12 @@ public class CustomGlideModule implements GlideModule {
         builder.setDecodeFormat(DecodeFormat.PREFER_RGB_565);
         // set disk cache
         builder.setDiskCache(new DiskLruCacheFactory(externalImageDir, diskCacheSize));
-        // set memory cache
+        // or you can set disk cache by use below
+//        builder.setDiskCache(new InternalCacheDiskCacheFactory(context, diskCacheSize));
+//        builder.setDiskCache(new ExternalCacheDiskCacheFactory(context, diskCacheSize));
+
+
+        // set memory cache to some specific location
         builder.setMemoryCache(new LruResourceCache(memoryCacheSize));
         // set bitmap pool
 //        builder.setBitmapPool()
@@ -97,7 +114,7 @@ public class CustomGlideModule implements GlideModule {
 
     @Override
     public void registerComponents(Context context, Glide glide) {
-
+        glide.register(CustomImageSizeModel.class, InputStream.class, new CustomImageSizeModelFactory());
     }
 
 
