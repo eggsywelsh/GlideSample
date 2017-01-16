@@ -39,6 +39,8 @@
         <activity android:name=".TargetViewActivity"></activity>
         <activity android:name=".NotificationsActivity"></activity>
         <activity android:name=".AppWidgetActivity"></activity>
+        <activity android:name=".CustomRequestImageSizeActivity"></activity>
+        <activity android:name=".RotateImageActivity"></activity>
 
         <receiver android:name=".widget.CustomAppWidgetProvider">
             <intent-filter>

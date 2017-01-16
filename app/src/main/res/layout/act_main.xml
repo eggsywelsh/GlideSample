@@ -89,5 +89,19 @@
             android:layout_below="@id/btn_target_view"
             android:text="Notification" />
 
+        <Button
+            android:id="@+id/btn_custom_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_notification"
+            android:text="Custom Model" />
+
+        <Button
+            android:id="@+id/btn_rotate_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_custom_model"
+            android:text="Rotate Image" />
+
     </RelativeLayout>
 </ScrollView>

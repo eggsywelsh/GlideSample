@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_notification)
     Button mBtnNotification;
 
+    @BindView(R.id.btn_rotate_image)
+    Button mBtnRotateImage;
+
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -135,6 +138,18 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_notification)
     public void clickNotification(View view) {
         Intent intent = new Intent(MainActivity.this, NotificationsActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_custom_model)
+    public void clickCustomModel(View view) {
+        Intent intent = new Intent(MainActivity.this, CustomRequestImageSizeActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_rotate_image)
+    public void clickRotateImage(View view) {
+        Intent intent = new Intent(MainActivity.this, RotateImageActivity.class);
         startActivity(intent);
     }
 
