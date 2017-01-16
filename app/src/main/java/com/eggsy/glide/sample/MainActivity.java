@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_dynamic_model)
     Button mBtnDynamicModel;
 
-    @BindView(R.id.btn_rotate_image)
+    @BindView(R.id.btn_transformation)
     Button mBtnRotateImage;
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -168,9 +168,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @OnClick(R.id.btn_rotate_image)
+    @OnClick(R.id.btn_transformation)
     public void clickRotateImage(View view) {
-        Intent intent = new Intent(MainActivity.this, RotateImageActivity.class);
+        Intent intent = new Intent(MainActivity.this, TransformationActivity.class);
         startActivity(intent);
     }
 

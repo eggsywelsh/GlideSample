@@ -17,6 +17,20 @@
         android:text="load rotate image"
         />
 
+    <Button
+        android:id="@+id/btn_load_blur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load blur image"
+        />
+
+    <Button
+        android:id="@+id/btn_load_multi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load multi transforms"
+        />
+
     <ImageView
         android:id="@+id/iv_show"
         android:layout_width="match_parent"
