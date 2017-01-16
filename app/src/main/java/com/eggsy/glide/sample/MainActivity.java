@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_notification)
     Button mBtnNotification;
 
+    @BindView(R.id.btn_debug_error)
+    Button mBtnDebugError;
+
     @BindView(R.id.btn_custom_model)
     Button mBtnCustomModel;
 
@@ -144,6 +147,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_notification)
     public void clickNotification(View view) {
         Intent intent = new Intent(MainActivity.this, NotificationsActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_debug_error)
+    public void clickDebugAndError(View view) {
+        Intent intent = new Intent(MainActivity.this, DebugAndErrorActivity.class);
         startActivity(intent);
     }
 

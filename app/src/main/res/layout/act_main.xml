@@ -90,10 +90,17 @@
             android:text="Notification" />
 
         <Button
-            android:id="@+id/btn_custom_model"
+            android:id="@+id/btn_debug_error"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_notification"
+            android:text="Debug And Error" />
+
+        <Button
+            android:id="@+id/btn_custom_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_debug_error"
             android:text="Custom Model" />
 
         <Button

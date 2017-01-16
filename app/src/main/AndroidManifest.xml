@@ -39,6 +39,7 @@
         <activity android:name=".TargetViewActivity"></activity>
         <activity android:name=".NotificationsActivity"></activity>
         <activity android:name=".AppWidgetActivity"></activity>
+        <activity android:name=".DebugAndErrorActivity"></activity>
         <activity android:name=".CustomRequestImageSizeActivity"></activity>
         <activity android:name=".DynamicModelLoaderActivity"></activity>
         <activity android:name=".RotateImageActivity"></activity>
