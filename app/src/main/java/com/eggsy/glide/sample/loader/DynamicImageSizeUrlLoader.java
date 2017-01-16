@@ -10,17 +10,17 @@ import com.eggsy.glide.sample.model.CustomImageSizeModel;
  * Created by eggsy on 17-1-16.
  */
 
-public class CustomImageSizeUrlLoader extends BaseGlideUrlLoader<CustomImageSizeModel> {
+public class DynamicImageSizeUrlLoader extends BaseGlideUrlLoader<CustomImageSizeModel> {
 
-    private static final String TAG = CustomImageSizeUrlLoader.class.getSimpleName();
+    private static final String TAG = DynamicImageSizeUrlLoader.class.getSimpleName();
 
-    public CustomImageSizeUrlLoader(Context context) {
+    public DynamicImageSizeUrlLoader(Context context) {
         super(context);
     }
 
     @Override
     protected String getUrl(CustomImageSizeModel model, int width, int height) {
-        Log.i(TAG,"invoke CustomImageSizeUrlLoader.getUrl() method");
+        Log.i(TAG,"invoke DynamicImageSizeUrlLoader.getUrl() method");
         return model.requestCustomSizeUrl( width, height );
     }
 }

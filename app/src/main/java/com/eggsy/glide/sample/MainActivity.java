@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_notification)
     Button mBtnNotification;
 
+    @BindView(R.id.btn_custom_model)
+    Button mBtnCustomModel;
+
+    @BindView(R.id.btn_dynamic_model)
+    Button mBtnDynamicModel;
+
     @BindView(R.id.btn_rotate_image)
     Button mBtnRotateImage;
 
@@ -144,6 +150,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_custom_model)
     public void clickCustomModel(View view) {
         Intent intent = new Intent(MainActivity.this, CustomRequestImageSizeActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_dynamic_model)
+    public void clickDynamicModel(View view) {
+        Intent intent = new Intent(MainActivity.this, DynamicModelLoaderActivity.class);
         startActivity(intent);
     }
 
